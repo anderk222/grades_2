@@ -1,0 +1,87 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://example.com/nota.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "materia",
+        "alumno",
+        "nota"
+    ],
+    "properties": {
+        "id": {
+            "type": "integer",
+            "default": 0,
+            "title": "The id Schema",
+            "examples": [
+                0
+            ]
+        },
+        "materia": {
+            "type": "object",
+            "default": {},
+            "title": "The materia Schema",
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The id Schema",
+                    "exclusiveMinimun" : 1,
+                    "examples": [
+                        1
+                    ]
+                }
+            },
+            "examples": [{
+                "id": 1
+            }]
+        },
+        "alumno": {
+            "type": "object",
+            "default": {},
+            "title": "The alumno Schema",
+            "required": [
+                "id"
+            ],
+            "properties": {
+                "id": {
+                    "type": "integer",
+                    "default": 0,
+                    "title": "The id Schema",
+                    "minimum" : 1,
+                    "examples": [
+                        1
+                    ]
+                    
+                }
+            },
+            "examples": [{
+                "id": 1
+            }]
+        },
+        "nota": {
+            "type": "number",
+            "default": 0.0,
+            "title": "The nota Schema",
+            "minimum" : 0,
+            "maximum" : 10,
+            "examples": [
+                5.45
+            ]
+        }
+    },
+    "examples": [{
+        "id": 0,
+        "materia": {
+            "id": 1
+        },
+        "alumno": {
+            "id": 1
+        },
+        "nota": 5.45
+    }]
+}

@@ -1,0 +1,49 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "http://example.com/maestro.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "nombre",
+        "apellido",
+        "titulo"
+    ],
+    "properties": {
+        "nombre": {
+            "type": "string",
+            "default": "",
+            "title": "The nombre Schema",
+            "maxLength":45,
+            "minLength":2,
+            "examples": [
+                "Anderson"
+            ]
+        },
+        "apellido": {
+            "type": "string",
+            "default": "",
+            "title": "The apellido Schema",
+            "maxLength":45,
+            "minLength":2,
+            "examples": [
+                "Macias"
+            ]
+        },
+        "titulo": {
+            "type": "string",
+            "default": "",
+            "title": "The titulo Schema",
+            "maxLength":100,
+            "minLength":2,
+            "examples": [
+                "Tecnologo Desarrollo de Software"
+            ]
+        }
+    },
+    "examples": [{
+        "nombre": "Anderson",
+        "apellido": "Macias",
+        "titulo": "Tecnologo Desarrollo de Software"
+    }]
+}
